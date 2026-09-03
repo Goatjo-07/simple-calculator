@@ -1,19 +1,31 @@
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
-operation = input("Select the operation (+, -, *, /): ")
+operation = input("Select the operation (+, -, *, /, **, //, %): ")
 
 if operation == "+":
-    result = num1 + num2
+    answer = num1 + num2
 elif operation == "-":
-    result = num1 - num2 
+    answer = num1 - num2 
 elif operation == "*":
-    result = num1 * num2
+    answer = num1 * num2
 elif operation == "/":
     if num2 != 0:
-        result = num1 / num2
+        answer = num1 / num2
     else:
-        result = "Error: Division by zero"
+        answer = "Error: Division by zero"
+elif operation == '**':
+    answer = num1 ** num2
+elif operation == '//':
+    if num2 != 0:
+        answer = num1 // num2
+    else:
+        answer = "Error: Division by zero"
+elif operation == '%':
+    if num2 != 0:
+        answer = num1 % num2
+    else:
+        answer = "Error: Division by zero"
 else:
-    result = "Error: Invalid operation"
+    answer = "Error: Invalid operation"
 
-print("Answer: ", result)
+print("Answer: ", answer)
